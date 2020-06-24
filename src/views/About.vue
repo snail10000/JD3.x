@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+      <br/>
+    <cube-button type="submit">Submit Button</cube-button>
   </div>
 </template>
