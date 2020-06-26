@@ -69,7 +69,11 @@
         methods:{
             submitHandler(e){
                 e.preventDefault()
-                console.log('我注册了')
+                this.$http.get('/api/register',{params:this.model}).then(res=>{
+                    console.log(res.data.success)
+                }).catch(err=>{
+                    console.log(err)
+                })
             }
         }
     }
