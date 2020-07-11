@@ -1,5 +1,6 @@
 <template>
     <div>
+        <img class="headering" src="https://file.xdclass.net/video/%E5%AE%98%E7%BD%91%E8%BD%AE%E6%92%AD%E5%9B%BE/22lbt-ssm.jpeg"/>
         <cube-form
             :model="model"
             :schema="schema"
@@ -80,5 +81,7 @@
 </script>
 
 <style lang="stylus" scoped>
-
+    .headering
+        height 150px
+        width 100%
 </style>
