@@ -39,11 +39,8 @@
 </script>
 
 <style lang="stylus" scoped>
-    #index
-        a
-            .banner
-                display block
-                width 100%
-                height 175px
-
+    #index a .banner
+        display block
+        width 100%
+        height 175px
 </style>
