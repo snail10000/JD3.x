@@ -73,11 +73,11 @@
                 try {
                     const result = await this.$http.get('/api/login',{params:this.model});
                     console.log(result);
-                    if(result.data.code == '0'){
-                        this.$store.commit('settoken',result.data.token)
-                        window.localStorage.setItem('token',result.data.token)
+                    if(result.code == '0'){
+                        this.$store.commit('settoken',result.token)
+                        window.localStorage.setItem('token',result.token)
                     }else{
-                        alert(result.data.message);
+                        alert(result.message);
                     }
                 } catch (e) {
                     console.log(e)
