@@ -1,10 +1,19 @@
 <template>
     <div  id="index">
+        <!--轮播图-->
         <cube-slide ref="slide" :data="items" @change="changePage">
             <cube-slide-item v-for="(item, index) in items" :key="index" @click.native="clickHandler(item, index)">
                 <a :href="item.url">
                     <img class="banner" :src="item.image">
                 </a>
+            </cube-slide-item>
+        </cube-slide>
+        <!--滚动分类-->
+        <cube-slide ref="slide" :data="lists" @change="changePage">
+            <cube-slide-item v-for="(list, index) in lists" :key="index">
+                <ul>
+                    <li v-for="(item,index1) in list" :key="index1"></li>
+                </ul>
             </cube-slide-item>
         </cube-slide>
     </div>
@@ -14,7 +23,8 @@
     export default {
         data() {
             return {
-                items: [ ]
+                items: [],
+                lists: []
             }
         },
         methods: {

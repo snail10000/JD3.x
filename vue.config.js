@@ -52,13 +52,13 @@ module.exports = {
                 //首页轮播图数据接口
                 app.get('/api/banner',(req,res)=>{
                     res.json({
-                        data:[  {
+                        data:[{
                             url: 'https://m.xdclass.net',
                             image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/bannner/1901/learn.png'
-                        },
+                            },
                             {
                                 url: 'https://m.xdclass.net',
-                                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/upload/banner/devpay.png'
+                                image: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594791853744&di=d04b030652f45674534027e843aca16d&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg'
                             },
                             {
                                 url: 'https://m.xdclass.net',
