@@ -74,8 +74,9 @@
                     const result = await this.$http.get('/api/login',{params:this.model});
                     console.log(result);
                     if(result.code == '0'){
-                        this.$store.commit('settoken',result.token)
-                        window.localStorage.setItem('token',result.token)
+                        this.$store.commit('settoken',result.token);
+                        window.localStorage.setItem('token',result.token);
+                        this.$router.replace({path:'/index'});
                     }else{
                         alert(result.message);
                     }
