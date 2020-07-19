@@ -52,11 +52,17 @@ Vue.use(VueRouter)
                 {
                     path: 'cart',
                     name: 'cart',
+                    meta:{
+                      requireAuth:true//当有这个字段的时候我们就认为这个页面是需要登录权限的
+                    },
                     component: () => import( '../views/Cart.vue')
                 },
                 {
                     path: 'mine',
                     name: 'mine',
+                    meta:{
+                        requireAuth:true//当有这个字段的时候我们就认为这个页面是需要登录权限的
+                    },
                     component: () => import( '../views/Mine.vue')
                 }
             ]

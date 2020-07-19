@@ -76,7 +76,12 @@
                     if(result.code == '0'){
                         this.$store.commit('settoken',result.token);
                         window.localStorage.setItem('token',result.token);
-                        this.$router.replace({path:'/botnav/index'});
+                        //判断路由是否带参数,决定登录之后的地址
+                        if(this.$route.query.redirect){
+                            this.$router.replace({path:this.$route.query.redirect});
+                        }else{
+                            this.$router.replace({path:'/botnav/index'});
+                        }
                     }else{
                         alert(result.message);
                     }
